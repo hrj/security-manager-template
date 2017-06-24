@@ -7,8 +7,8 @@ import java.security.Policy;
 public class App {
 
 	public static void main(String[] args) throws IOException {
-		Policy.setPolicy(LocalSecurityPolicy.getInstance());
-		System.setSecurityManager(new LocalSecurityManager());
+		Policy.setPolicy(new LocalSecurityPolicy());
+		System.setSecurityManager(new SecurityManager());
 
 		System.out.println("Security manager installed.");
 
